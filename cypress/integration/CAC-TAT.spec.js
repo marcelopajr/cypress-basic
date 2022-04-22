@@ -27,7 +27,7 @@ describe('Central de Atendimento ao Cliente TAT', function () {
     cy.get('#email').type('marcelopereira@gmail,com');
     cy.get('#phone').type(85988888888);
     cy.get('#open-text-area').type('Teste');
-    cy.get('button[type="submit"]').click();
+    cy.contains('button', 'Enviar').click();
 
     cy.get('.error').should('be.visible');
   });
